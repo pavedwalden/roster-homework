@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V2a-Hm-5df">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+    </dependencies>
+    <scenes>
+        <!--People-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="peopleListController" id="BYZ-38-t0r" customClass="PeopleViewController" customModule="Class_Roster_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oGf-uS-Pfh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="Xab-Dk-ut7">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xab-Dk-ut7" id="iqA-9g-AYR">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="People" id="ZLj-6r-BHW"/>
+                    <connections>
+                        <outlet property="peopleListTableView" destination="oGf-uS-Pfh" id="zCc-Pk-zbI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="374"/>
+        </scene>
+        <!--Person View Controller-->
+        <scene sceneID="r5w-bE-Q6q">
+            <objects>
+                <viewController storyboardIdentifier="personDetailController" id="XjJ-vg-mci" customClass="PersonViewController" customModule="Class_Roster_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="usI-bN-r9Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="if2-mj-CZY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Khs-su-6X4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKy-mO-IK0">
+                                <rect key="frame" x="200" y="20" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GIL-XK-oVq"/>
+                                    <constraint firstAttribute="width" constant="200" id="vrw-RJ-vah"/>
+                                </constraints>
+                                <state key="normal" title="personPicture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="20" width="200" height="200"/>
+                                </variation>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmo-0z-qAW">
+                                <rect key="frame" x="200" y="228" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="228" width="200" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yj4-9a-wnF">
+                                <rect key="frame" x="200" y="266" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="266" width="200" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Twitter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6iT-xR-dKP">
+                                <rect key="frame" x="200" y="304" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="304" width="200" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Github" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCU-Gm-tXd">
+                                <rect key="frame" x="200" y="342" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="342" width="200" height="30"/>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6iT-xR-dKP" firstAttribute="top" secondItem="Yj4-9a-wnF" secondAttribute="bottom" constant="8" symbolic="YES" id="0qf-Db-C3K"/>
+                            <constraint firstAttribute="centerX" secondItem="sKy-mO-IK0" secondAttribute="centerX" id="4AL-d4-Vef"/>
+                            <constraint firstItem="QCU-Gm-tXd" firstAttribute="top" secondItem="6iT-xR-dKP" secondAttribute="bottom" constant="8" symbolic="YES" id="AUf-Il-lIk"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="width" secondItem="QCU-Gm-tXd" secondAttribute="width" id="Abw-Xc-mvD"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="width" secondItem="gmo-0z-qAW" secondAttribute="width" id="Eoh-nd-GTZ"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="centerX" secondItem="6iT-xR-dKP" secondAttribute="centerX" id="Eyv-0Z-GY0"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="centerX" secondItem="Yj4-9a-wnF" secondAttribute="centerX" id="HPL-Tb-WnF"/>
+                            <constraint firstItem="6iT-xR-dKP" firstAttribute="top" secondItem="Yj4-9a-wnF" secondAttribute="bottom" constant="8" symbolic="YES" id="O8p-nC-8Pg"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="centerX" secondItem="QCU-Gm-tXd" secondAttribute="centerX" id="Sk9-Rs-cVR"/>
+                            <constraint firstItem="QCU-Gm-tXd" firstAttribute="top" secondItem="6iT-xR-dKP" secondAttribute="bottom" constant="8" symbolic="YES" id="UAv-cb-R5P"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="width" secondItem="6iT-xR-dKP" secondAttribute="width" id="VXc-oj-twR"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="top" secondItem="usI-bN-r9Z" secondAttribute="bottom" constant="20" symbolic="YES" id="iLe-is-lNu"/>
+                            <constraint firstItem="gmo-0z-qAW" firstAttribute="top" secondItem="sKy-mO-IK0" secondAttribute="bottom" constant="8" symbolic="YES" id="pBi-jp-F7U"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="width" secondItem="Yj4-9a-wnF" secondAttribute="width" id="uvu-q0-2jj"/>
+                            <constraint firstItem="Yj4-9a-wnF" firstAttribute="top" secondItem="gmo-0z-qAW" secondAttribute="bottom" constant="8" symbolic="YES" id="xeD-JB-AoK"/>
+                            <constraint firstItem="sKy-mO-IK0" firstAttribute="centerX" secondItem="gmo-0z-qAW" secondAttribute="centerX" id="zcu-3b-bQv"/>
+                        </constraints>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="0qf-Db-C3K"/>
+                                <exclude reference="AUf-Il-lIk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="firstNameField" destination="gmo-0z-qAW" id="3Y8-ks-wu7"/>
+                        <outlet property="githubField" destination="QCU-Gm-tXd" id="3Jn-Ui-gr3"/>
+                        <outlet property="lastNameField" destination="Yj4-9a-wnF" id="UZI-PE-f4o"/>
+                        <outlet property="pictureButton" destination="sKy-mO-IK0" id="aFb-9a-1aa"/>
+                        <outlet property="twitterField" destination="6iT-xR-dKP" id="ddV-69-Yc2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IvB-O7-JUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VzL-6q-5zn">
+            <objects>
+                <navigationController storyboardIdentifier="navCtrl" automaticallyAdjustsScrollViewInsets="NO" id="V2a-Hm-5df" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LYl-sd-aZK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zZE-7D-c7N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rYe-zN-78y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346" y="374"/>
+        </scene>
+    </scenes>
+</document>
