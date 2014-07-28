@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersonViewController: UIViewController, UITextFieldDelegate {
+class PersonViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var firstNameField: UITextField!
     @IBOutlet weak var lastNameField: UITextField!
     @IBOutlet weak var twitterField: UITextField!
@@ -16,9 +16,17 @@ class PersonViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pictureButton: UIButton!
     
     var masterViewController : PeopleViewController?
+    var picSelector : UIImagePickerController?
     var selectedPerson : Person?
     var selectedPersonIndex : Int?
 
+    @IBAction func selectPicture(sender: AnyObject) {
+        picSelector = UIImagePickerController()
+        picSelector!.delegate = self
+        picSelector!.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        showDetailViewController(picSelector, sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +49,8 @@ class PersonViewController: UIViewController, UITextFieldDelegate {
         pictureButton.imageView.layer.borderWidth = 3.0
         pictureButton.imageView.layer.cornerRadius = 40.0
         pictureButton.imageView.layer.masksToBounds = true
+        
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -74,5 +84,23 @@ class PersonViewController: UIViewController, UITextFieldDelegate {
     
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         self.view.endEditing(true)
+    }
+    
+    //MARK: UIImagePickerControllerDelegate
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!){
+        if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            println("received image: \(originalImage)")
+            selectedPerson!.pic = originalImage
+            pictureButton.setImage(selectedPerson!.pic, forState: UIControlState.Normal)
+            picSelector!.dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            println("no image received")
+        }
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController!){
+        picker.dismissViewControllerAnimated(true) {
+            println("canceled")
+        }
     }
 }

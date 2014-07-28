@@ -9,6 +9,10 @@
 		<string>Clem</string>
 	</dict>
 	<dict>
+		<key>twitter</key>
+		<string>bpjonsin</string>
+		<key>github</key>
+		<string>bradleypj823</string>
 		<key>firstName</key>
 		<string>Brad</string>
 		<key>lastName</key>
@@ -27,6 +31,8 @@
 		<string>Rice</string>
 	</dict>
 	<dict>
+		<key>github</key>
+		<string>Victor-Adu</string>
 		<key>firstName</key>
 		<string>Victor</string>
 		<key>lastName</key>
@@ -45,24 +51,40 @@
 		<string>Gayle</string>
 	</dict>
 	<dict>
+		<key>github</key>
+		<string>thesubway</string>
+		<key>twitter</key>
+		<string>@danthephoenix7</string>
 		<key>firstName</key>
 		<string>Daniel</string>
 		<key>lastName</key>
 		<string>Hoang</string>
 	</dict>
 	<dict>
+		<key>github</key>
+		<string>lee-leonardo</string>
+		<key>twitter</key>
+		<string>@theChromatose</string>
 		<key>firstName</key>
 		<string>Leonardo</string>
 		<key>lastName</key>
 		<string>Lee</string>
 	</dict>
 	<dict>
+		<key>twitter</key>
+		<string>@kirbyshabaga</string>
+		<key>github</key>
+		<string>kirby</string>
 		<key>firstName</key>
 		<string>Kirby</string>
 		<key>lastName</key>
 		<string>Shabaga</string>
 	</dict>
 	<dict>
+		<key>github</key>
+		<string>michaeltirenin</string>
+		<key>twitter</key>
+		<string>@michaeltirenin</string>
 		<key>firstName</key>
 		<string>Michael</string>
 		<key>lastName</key>
